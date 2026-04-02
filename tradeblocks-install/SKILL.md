@@ -67,7 +67,8 @@ The TradeBlocks tutorial skill walks you through the analysis tools one at a tim
 your real data. Here's how to get it:
 
 **Download the tutorial skill:**
-> "Head to [YOUR_GITHUB_URL] and download the file called `tradeblocks-tutorial.zip`."
+> "Head to https://github.com/amyyesand/claude-skills and download the file called
+> `tradeblocks-tutorial.zip` from the `tradeblocks-tutorial` folder."
 
 **Install it in Claude Desktop:**
 1. Open Claude Desktop
