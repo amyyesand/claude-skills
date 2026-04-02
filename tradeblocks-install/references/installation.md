@@ -73,11 +73,14 @@ Add this content — replacing the path with their actual folder:
   "mcpServers": {
     "tradeblocks": {
       "command": "npx",
-      "args": ["tradeblocks-mcp", "/path/to/your/trading/folder"]
+      "args": ["-y", "tradeblocks-mcp", "/path/to/your/trading/folder"]
     }
   }
 }
 ```
+
+The `-y` flag is important — it tells npx to automatically confirm the package download
+without waiting for user input. Without it, the connection may silently fail.
 
 If the file already exists with other content, add the `"tradeblocks"` entry inside the
 existing `"mcpServers"` block rather than replacing the whole file.

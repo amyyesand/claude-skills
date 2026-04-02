@@ -4,6 +4,28 @@ Two Claude skills that guide new users through setting up and learning TradeBloc
 
 ---
 
+## Start Here
+
+If you're brand new to TradeBlocks, follow these four steps:
+
+**1. Download the installation skill**
+Click here to download: [tradeblocks-install.zip](tradeblocks-install/tradeblocks-install.zip)
+
+**2. Install it in Claude Desktop**
+- Open Claude Desktop
+- Go to **Settings → Skills**
+- Click **Upload Skill** and select the zip file you just downloaded
+
+**3. Open a new chat and type:**
+```
+/tradeblocks-install
+```
+
+**4. Follow the guide**
+Claude will walk you through everything — what TradeBlocks is, how to install it, how to get your data loaded, and how to launch the interactive tutorial when you're ready.
+
+---
+
 ## Skills
 
 ### 1. `tradeblocks-install` — Installation Guide
