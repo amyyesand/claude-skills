@@ -1,7 +1,19 @@
 # Getting Your Trade Data Into TradeBlocks
 
-Read this file when the user needs to get their first CSV imported, or when `list_blocks`
-returns empty. Walk them through it conversationally — check in at each step.
+Read this file when the user says they have trading data, or after the MCP connection is
+verified. Walk them through it conversationally — check in at each step.
+
+---
+
+## Step 0: Check What's Already There
+
+Before asking the user anything, call `list_blocks` silently.
+
+- **If it returns blocks:** Their data is already loaded — no importing needed.
+  Say: "Your data is already there — I can see [X blocks]. You're all set!"
+  Return to the main tutorial flow.
+
+- **If it returns empty:** Continue below to help them get data in.
 
 ---
 
