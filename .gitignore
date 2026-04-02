@@ -1,0 +1,10 @@
+# macOS
+.DS_Store
+
+# PyCharm
+.idea/
+
+# Python (leftover from PyCharm project creation)
+.venv/
+__pycache__/
+*.py
