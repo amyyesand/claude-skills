@@ -44,29 +44,42 @@ Use whatever name they give as the `strategyName` when calling `profile_strategy
 
 ## Step 2: Profile Each Strategy
 
-Work through strategies one at a time. For each one, ask these questions conversationally
-— not as a list, but as a natural back-and-forth:
+Work through strategies one at a time. Keep the conversation simple — infer what you
+can from the structure type, and only ask when you genuinely need clarification.
 
 **Structure type** — What kind of option trade is it?
 Examples: iron condor, calendar spread, double calendar, vertical spread, butterfly,
 straddle, strangle, reverse iron condor. If they're not sure, have them describe it
 and help identify it from the legs.
 
-**Greek bias** — What's the primary exposure?
-- `theta_positive` — selling premium, collecting time decay
-- `vega_negative` — profits when implied volatility drops
-- `delta_neutral` — not betting on market direction
-- `delta_positive` / `delta_negative` — has a directional bias
+**Greek bias** — Infer this from the structure type where possible using the table below.
+Do NOT ask the user about "Greek bias" or use Greek terminology directly — it will
+confuse non-technical users. Instead, confirm in plain English:
+> "Double calendars typically profit from time decay and a drop in volatility after
+> you put the trade on. Does that match how you think about this one?"
+
+Common structure defaults (use these unless the user says otherwise):
+- iron condor → `theta_positive`, `vega_negative`, `delta_neutral`
+- double calendar → `theta_positive`, `vega_negative`
+- calendar spread → `theta_positive`, `vega_negative`
+- vertical spread (credit) → `theta_positive`, `delta_positive` or `delta_negative`
+- butterfly → `theta_positive`, `delta_neutral`
+- short strangle / straddle → `theta_positive`, `vega_negative`
+- reverse iron condor → `vega_positive`, `delta_neutral`
+- long straddle / strangle → `vega_positive`, `delta_neutral`
 
 **Underlying** — What ticker does it trade? SPX, SPY, QQQ, GLD, etc.
 
-**Expected VIX regimes** — What volatility environment is it designed for?
-- `very_low` = VIX below 13
-- `low` = VIX 13–16
-- `below_avg` = VIX 16–20
-- `above_avg` = VIX 20–25
-- `high` = VIX 25–30
-- `extreme` = VIX 30+
+**Expected VIX regimes** — Ask in plain English, not using the bucket names:
+> "What kind of market environment is this strategy designed for — calm and quiet,
+> normal, or does it work better when things are a bit more volatile?"
+
+Then map their answer to the appropriate buckets:
+- "calm / quiet / low vol" → `very_low`, `low`
+- "normal" → `below_avg`, `above_avg`
+- "volatile / elevated" → `above_avg`, `high`
+- "any conditions" → all regimes
+- "I avoid high VIX" → `very_low`, `low`, `below_avg`
 
 Once you have these four basics, call `profile_strategy` to store it. You don't need the
 advanced fields (legs, entry filters, exit rules, position sizing) for the tutorial —
