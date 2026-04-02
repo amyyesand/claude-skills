@@ -13,8 +13,10 @@ Click here to download: [tradeblocks-install.zip](tradeblocks-install/tradeblock
 
 **2. Install it in Claude Desktop**
 - Open Claude Desktop
-- Go to **Settings → Skills**
-- Click **Upload Skill** and select the zip file you just downloaded
+- Click **Customize** in the left sidebar
+- Click **Skills**
+- Click the **+** button and select **Upload a skill**
+- Select the zip file you just downloaded
 
 **3. Open a new chat and type:**
 ```
@@ -72,9 +74,10 @@ Walks a connected user through TradeBlocks' core analysis tools one at a time, u
 
 ### Claude Desktop
 1. Download the `.zip` file for the skill you want
-2. Open Claude Desktop and go to **Settings → Skills**
-3. Click **Upload Skill** and select the zip file
-4. The skill will appear in your `/` slash command menu
+2. Click **Customize** in the left sidebar
+3. Click **Skills**
+4. Click the **+** button and select **Upload a skill**
+5. Select the zip file — it will appear in your `/` slash command menu
 
 ### Claude Code (CLI)
 Unzip the skill folder into `~/.claude/skills/`:

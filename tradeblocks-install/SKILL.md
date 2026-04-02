@@ -71,10 +71,11 @@ your real data. Here's how to get it:
 > `tradeblocks-tutorial.zip` from the `tradeblocks-tutorial` folder."
 
 **Install it in Claude Desktop:**
-1. Open Claude Desktop
-2. Go to **Settings → Skills**
-3. Click **Upload Skill** and select the zip file you just downloaded
-4. Once installed, you'll see `tradeblocks-tutorial` in your `/` slash command menu
+1. Click **Customize** in the left sidebar
+2. Click **Skills**
+3. Click the **+** button and select **Upload a skill**
+4. Select the zip file you just downloaded
+5. Once installed, you'll see `tradeblocks-tutorial` in your `/` slash command menu
 
 **Launch it:**
 > "Start a new chat and type `/tradeblocks-tutorial` — the tutorial will take it from there
