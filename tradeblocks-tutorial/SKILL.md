@@ -69,9 +69,10 @@ and how to interpret results for every tool in the tour.
 ## Special Situations
 
 **If strategy profiles are missing:**
-When `portfolio_health_check` flags skipped checks, don't leave them wondering.
-Read [references/profiling.md] and explain profiles naturally, then offer to walk through
-creating their first one as an optional next step.
+When `portfolio_health_check` flags skipped checks, mention it briefly in plain English
+and keep moving. Do NOT start the profiling flow during the tour — it's a separate session.
+Say something like: "A few checks were skipped because your strategies don't have profiles
+yet — that's a separate setup step we can tackle another time. Let's keep going."
 
 **If they have no data:**
 If `list_blocks` returns empty, do NOT continue the tour.

@@ -91,12 +91,13 @@ let me check whether it's a real concern or a quirk of how the math works with c
 Above 70% is healthy."
 
 **If checks were skipped due to missing profiles:**
-Don't just mention it in passing — explain it clearly:
+Mention it briefly and offer to come back to it — don't dive in during the tour:
 > "A few checks were skipped because your strategies don't have profiles yet. A profile is just
-> a short description of each strategy — what type of trade it is, what market conditions it's
-> designed for. Once added, TradeBlocks can check things like whether you're trading each strategy
-> in its ideal environment. It's a useful next step — I can walk you through it whenever you're ready."
-Read [profiling.md] when they want to do this.
+> a short label for each strategy that tells TradeBlocks what kind of trade it is and what market
+> conditions it's designed for — it unlocks some deeper analysis. Setting them up is a separate
+> session though, so let's keep going with the tour for now and you can come back to it later."
+
+Do NOT start the profiling flow during the tool tour. Keep moving.
 
 ---
 
